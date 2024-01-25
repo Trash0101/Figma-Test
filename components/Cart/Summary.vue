@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useCartStore } from "#imports";
 import { $fetch } from "ofetch";
+import type { ItemAPI } from "~/types/types";
 const cartStore = useCartStore();
 const installStatus = computed(() => {
   if (cartStore.installationStatus) {
@@ -11,7 +12,7 @@ const installStatus = computed(() => {
 });
 const sendRequest = async () => {
   try {
-    const cartAPI: ItemAPI = [];
+    const cartAPI:ItemAPI[] = [];
     cartStore.cartItems.forEach((el) => {
       cartAPI.push({
         id: el.id,
