@@ -84,7 +84,14 @@ export const useViewedStore = defineStore("viewed", () => {
       description: "Вытяжное устройство для механической системы вентиляции",
     },
   ]);
+  const itemsPerPage = ref(4)
+  const pagesCount = computed(()=> {
+    return Math.floor(viewedItems.value.length/itemsPerPage.value)
+  })
+  const currentPage = ref(1)
   return {
     viewedItems,
+    pagesCount,
+    currentPage,
   };
 });

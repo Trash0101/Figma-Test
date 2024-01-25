@@ -1,5 +1,11 @@
 <script setup lang="ts">
+import type Swiper from "swiper";
+
 const viewedStore = useViewedStore();
+const changeSlide = (e:Swiper)=> {
+  console.log(e.snapIndex)
+  viewedStore.currentPage = e.snapIndex+1
+}
 </script>
 
 <template>
@@ -8,6 +14,7 @@ const viewedStore = useViewedStore();
     :slides-per-view="4"
     :slides-per-group="4"
     :space-between="10"
+    @slideChange="changeSlide"
   >
     <template v-slot:container-start><div class="carousel__head">
       <div class="carousel__head--text">Просмотренные товары</div>

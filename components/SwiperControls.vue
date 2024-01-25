@@ -1,21 +1,7 @@
 <script setup lang="ts">
 const viewedStore = useViewedStore();
 const swiper = useSwiper();
-const slidesPerPage = ref(4);
-const currentPage = ref(1);
-const totalPages = computed(() => {
-  return Math.ceil(viewedStore.viewedItems.length / slidesPerPage.value);
-});
-const nextSlide = () => {
-  if (currentPage.value <= totalPages.value - 1) {
-    currentPage.value++;
-  }
-};
-const prevSlide = () => {
-  if (currentPage.value > 1) {
-    currentPage.value--;
-  }
-};
+
 </script>
 
 <template>
@@ -23,18 +9,16 @@ const prevSlide = () => {
     <PHCaretLeft
       @click="
         swiper.slidePrev();
-        prevSlide();
       "
       class="buttons__direction"
     ></PHCaretLeft>
     <div class="buttons__text">
-      <span class="buttons__text--big">{{ currentPage }}</span
-      >/{{ totalPages }}
+      <span class="buttons__text--big">{{ viewedStore.currentPage }}</span
+      >/{{ viewedStore.pagesCount }}
     </div>
     <PHCaretRight
       @click="
         swiper.slideNext();
-        nextSlide();
       "
       class="buttons__direction"
     ></PHCaretRight>
