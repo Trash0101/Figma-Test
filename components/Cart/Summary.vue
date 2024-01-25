@@ -48,8 +48,8 @@ const sendRequest = async () => {
       <div class="summary__block--right">{{ installStatus }}</div>
     </div>
     <div class="summary__block summary__big">
-      <div class="summary__big--left">Стоимость товаров</div>
-      <div class="summary__big--right">{{ cartStore.totalPrice }} ₽</div>
+      <span class="summary__big--left">Стоимость товаров</span>
+      <span class="summary__big--right">{{ cartStore.totalPrice }} ₽</span>
     </div>
     <button class="summary__button" @click="sendRequest">Оформить заказ</button>
     <button class="summary__button summary__button--hollow">
@@ -61,25 +61,27 @@ const sendRequest = async () => {
 <style scoped lang="scss">
 .summary {
   padding: 1.5rem 2rem;
-  height: 60%;
+  height: 80%;
   width: 100%;
   grid-column: 2;
   grid-row: 3;
   background-color: $background__grey;
   display: flex;
   flex-direction: column;
-  border-radius: 1rem;
+  border-radius: .5rem;
   justify-content: center;
   &__head {
     padding: 0.5rem 1rem;
-    font-size: 1.6rem;
-    font-weight: 500;
+    font-size: 2.4rem;
+    font-weight: 600;
   }
   &__block {
     padding: 0.5rem 1rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
     &--line {
       border-bottom: solid 0.1rem $font__secondary;
     }
@@ -87,21 +89,25 @@ const sendRequest = async () => {
   &__big {
     align-items: flex-end;
     margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
     &--left {
       font-weight: 500;
       font-size: 1.2rem;
     }
     &--right {
+      padding: 0;
       font-weight: 600;
       font-size: 2.4rem;
     }
   }
   &__button {
-    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    padding: 1.4rem 4rem;
     color: white;
     background-color: $buttons;
     border: none;
-    border-radius: 0.2rem;
+    border-radius: 0.4rem;
     margin-bottom: 1rem;
     font-weight: 500;
 

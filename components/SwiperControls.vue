@@ -56,11 +56,11 @@ const prevSlide = () => {
     cursor: pointer;
   }
   &__text {
-    font-size: 0.8rem;
+    font-size: 1.8rem;
     color: $font__secondary;
     &--big {
       color: $font__main;
-      font-size: 1.6rem;
+      font-size: 2.4rem;
     }
   }
 }

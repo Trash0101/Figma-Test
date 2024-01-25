@@ -44,8 +44,10 @@ const cartItemsNaming = computed(() => {
   justify-items: center;
   align-items: center;
   column-gap: 4rem;
+  row-gap: 4rem;
 }
 .link {
+  font-size: 1.4rem;
   padding: 1.5rem 2rem;
   grid-column: 1;
   grid-row: 2;
@@ -81,11 +83,11 @@ const cartItemsNaming = computed(() => {
     flex-direction: column;
     &--highlight {
       padding: 0.1rem 0.2rem;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
     &--quantity {
       padding: 0.1rem 0.2rem;
-      font-size: 0.8rem;
+      font-size: 1.2rem;
       color: $font__secondary;
     }
     &--price {

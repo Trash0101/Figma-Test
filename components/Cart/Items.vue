@@ -72,14 +72,15 @@ const switchInst = () => {
     align-items: center;
     justify-content: space-between;
     &--bold {
-      font-size: 3.6rem;
+      font-size: 4.4rem;
       padding: 0.5rem 1rem;
     }
     &--count {
-      font-size: 1rem;
+      font-size: 1.8rem;
       color: $font__secondary;
     }
     &--button {
+      font-size: 1.4rem;
       text-decoration: underline;
       color: $font__secondary;
       justify-self: end;
@@ -115,10 +116,15 @@ const switchInst = () => {
     display: flex;
     flex-direction: column;
     &--top {
-      font-size: 1.2rem;
+      font-size: 1.6rem;
       font-weight: 600;
+      margin-bottom: .5rem;
+      line-height: 145%;
     }
     &--bottom {
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 150%;
       color: $font__secondary;
     }
   }

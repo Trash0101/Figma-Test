@@ -28,37 +28,39 @@ const props = defineProps<{
   flex-direction: column;
   align-items: flex-start;
   background-color: $background__grey;
-  border-radius: 1rem;
+  border-radius: .5rem;
   &__img {
     max-height: 60%;
   }
   &__head {
-    font-size: 1.6rem;
-    font-weight: 500;
+    font-size: 2.2rem;
+    font-weight: 700;
     text-align: start;
     margin-bottom: 0.5rem;
   }
   &__des {
+    font-size: 1.4rem;
     margin-bottom: 3rem;
   }
   &__price--rub {
-    font-size: 1.6rem;
+    font-size: 2.2rem;
     font-weight: 500;
     margin-bottom: 0.25rem;
   }
   &__price--eur {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     color: $font__secondary;
     margin-bottom: 1rem;
   }
   &__but {
+    font-size: 1.6rem;
     width: 100%;
     text-align: center;
-    padding: 0.75rem 1rem;
+    padding: 1.5rem 5rem;
     color: white;
     background-color: $buttons;
     border: none;
-    border-radius: 0.2rem;
+    border-radius: 0.4rem;
     margin-bottom: 1rem;
     font-weight: 500;
     &:hover {

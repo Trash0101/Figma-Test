@@ -65,7 +65,7 @@ const deleteItem = () => {
 <style scoped lang="scss">
 .item {
   padding: 1.5rem 2rem;
-  height: 10rem;
+  height: 12rem;
   position: relative;
   display: grid;
   grid-template-rows: 1fr;
@@ -79,16 +79,18 @@ const deleteItem = () => {
     display: flex;
     flex-direction: column;
     &--name {
-      font-size: 1.2rem;
-      margin-bottom: 0.1rem;
+      font-weight: 600;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
     }
     &--additional {
-      font-size: 0.8rem;
-      margin-bottom: 0.1rem;
+      font-weight: 400;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
     }
     &--id {
       color: $font__secondary;
-      margin-bottom: 0.1rem;
+      font-size: 1.4rem;
     }
   }
   &__buttons {
@@ -98,6 +100,7 @@ const deleteItem = () => {
     justify-content: center;
     & > * {
       padding: 0.5rem 1rem;
+      font-size: 1.4rem;
       margin: 0.2rem;
       background: $buttons__cart;
       border: none;
@@ -113,14 +116,15 @@ const deleteItem = () => {
       }
     }
     &--ppu {
+      font-size: 1.2rem;
       background-color: transparent;
       position: absolute;
       bottom: -2.5rem;
     }
   }
   &__price {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.8rem;
+    font-weight: 500;
   }
   &__delete {
     font-size: 1.6rem;
