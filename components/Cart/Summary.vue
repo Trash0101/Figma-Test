@@ -61,16 +61,15 @@ const sendRequest = async () => {
 <style scoped lang="scss">
 .summary {
   padding: 1.5rem 2rem;
-  height: 90%;
+  height: 45rem;
   width: 100%;
   grid-column: 2;
-  grid-row: 3;
+  grid-row: 3/5;
   background-color: $background__grey;
   display: flex;
   flex-direction: column;
   border-radius: .5rem;
   justify-content: center;
-  align-self: end;
   &__head {
     padding: 2rem 1rem;
     font-size: 2.4rem;
