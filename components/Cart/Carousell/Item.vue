@@ -22,15 +22,17 @@ const props = defineProps<{
 
 <style scoped lang="scss">
 .container {
-  height: 100%;
+  height: 60rem;
   padding: 1.5rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-end;
   background-color: $background__grey;
   border-radius: .5rem;
   &__img {
     max-height: 60%;
+    overflow: hidden;
   }
   &__head {
     font-size: 2.2rem;

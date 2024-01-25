@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { CartItem } from "~/types/types";
-import { useCartStore } from "#imports";
+import {formatPrice, useCartStore} from "#imports";
 const cartStore = useCartStore();
 const props = defineProps<{
   cartItem: CartItem;
@@ -18,11 +18,7 @@ const priceString = computed(() => {
   return price;
 });
 const priceStringTotal = computed(() => {
-  let price = props.cartItem.totalPrice + "";
-  if (price.length > 4) {
-    price = price.slice(0, 2) + " " + price.slice(2);
-  }
-  return price;
+  return formatPrice(props.cartItem.totalPrice)
 });
 const decrease = () => {
   cartStore.removeExistingItem(props.cartItem.id);

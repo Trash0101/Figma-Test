@@ -1,5 +1,6 @@
 import { defineStore } from "pinia";
 import type { CartItem } from "~/types/types";
+import formatPrice from "~/composables/formatPrice";
 
 export const useCartStore = defineStore("cart", () => {
   const installationStatus = ref(false);
@@ -56,13 +57,7 @@ export const useCartStore = defineStore("cart", () => {
     cartItems.value.forEach((el) => {
       price += el.price * el.quantity;
     });
-    let priceString = price + "";
-    if (priceString.length === 5) {
-      priceString = priceString.slice(0, 2) + " " + priceString.slice(2);
-    } else if(priceString.length > 5) {
-      priceString = priceString.slice(0, 3) + " " + priceString.slice(3);
-    }
-    return priceString;
+    return  formatPrice(price);
   });
   const totalQuantity = computed(() => {
     let quantity = 0;

@@ -89,7 +89,7 @@ const switchInst = () => {
     }
   }
   &__list {
-    //overflow: scroll;
+    overflow: scroll;
     > *:not(:last-child) {
       border-bottom: solid 0.1rem $font__secondary;
     }

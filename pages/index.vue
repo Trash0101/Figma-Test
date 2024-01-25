@@ -37,7 +37,6 @@ const cartItemsNaming = computed(() => {
 <style scoped lang="scss">
 .grid {
   padding: 5rem 15vw;
-  height: 120vh;
   display: grid;
   grid-template-rows: 5% 5% 50% 10% 30%;
   grid-template-columns: 2fr 1fr;
