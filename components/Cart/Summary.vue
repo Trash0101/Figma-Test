@@ -43,7 +43,7 @@ const sendRequest = async () => {
       <div class="summary__block--left">Количество</div>
       <div class="summary__block--right">{{ cartStore.totalQuantity }}</div>
     </div>
-    <div class="summary__block summary__block--line">
+    <div class="summary__block summary__block--line padding--large">
       <div class="summary__block--left">Установка</div>
       <div class="summary__block--right">{{ installStatus }}</div>
     </div>
@@ -61,7 +61,7 @@ const sendRequest = async () => {
 <style scoped lang="scss">
 .summary {
   padding: 1.5rem 2rem;
-  height: 80%;
+  height: 90%;
   width: 100%;
   grid-column: 2;
   grid-row: 3;
@@ -70,8 +70,9 @@ const sendRequest = async () => {
   flex-direction: column;
   border-radius: .5rem;
   justify-content: center;
+  align-self: end;
   &__head {
-    padding: 0.5rem 1rem;
+    padding: 2rem 1rem;
     font-size: 2.4rem;
     font-weight: 600;
   }
@@ -93,7 +94,7 @@ const sendRequest = async () => {
     justify-content: space-between;
     &--left {
       font-weight: 500;
-      font-size: 1.2rem;
+      font-size: 1.8rem;
     }
     &--right {
       padding: 0;
@@ -120,5 +121,8 @@ const sendRequest = async () => {
       border: solid 0.1rem $buttons;
     }
   }
+}
+.padding--large{
+  padding-bottom: 4rem;
 }
 </style>

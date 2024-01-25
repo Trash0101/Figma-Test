@@ -14,7 +14,7 @@ const cartItemsNaming = computed(() => {
 <template>
   <div class="grid">
     <div class="cart">
-      <PHShoppingCart class="cart__icon"></PHShoppingCart>
+      <img src="@/assets/cart.svg" alt="cart" class="cart__icon"></img>
       <div class="cart__info">
         <div class="cart__info--highlight">Ваша корзина</div>
         <div class="cart__info--quantity">{{ cartItemsNaming }}</div>
@@ -36,7 +36,7 @@ const cartItemsNaming = computed(() => {
 
 <style scoped lang="scss">
 .grid {
-  padding: 5rem 20vw;
+  padding: 5rem 15vw;
   height: 120vh;
   display: grid;
   grid-template-rows: 5% 5% 50% 10% 30%;
@@ -75,8 +75,10 @@ const cartItemsNaming = computed(() => {
   display: flex;
   align-items: center;
   &__icon {
+    margin-right: 1rem;
     color: $buttons;
-    font-size: 3.6rem;
+    height: 3.2rem;
+    width: 3.2rem;
   }
   &__info {
     display: flex;

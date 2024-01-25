@@ -9,10 +9,10 @@ const viewedStore = useViewedStore();
     :slides-per-group="4"
     :space-between="10"
   >
-    <div class="carousel__head">
+    <template v-slot:container-start><div class="carousel__head">
       <div class="carousel__head--text">Просмотренные товары</div>
       <swiper-controls></swiper-controls>
-    </div>
+    </div></template>
     <swiper-slide
       class="carousel__slide"
       :loop="true"

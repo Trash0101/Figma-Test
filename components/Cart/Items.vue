@@ -43,7 +43,8 @@ const switchInst = () => {
         class="installation__check"
         v-model="installationStatus"
       />
-      <PHToolbox class="installation__ico"></PHToolbox>
+      <img alt="toolbox"  src="@/assets/toolbox.svg" class="installation__ico">
+      </img>
       <div class="installation__text">
         <label for="checkbox" class="installation__text--top">Установка</label>
         <span class="installation__text--bottom"
@@ -127,6 +128,10 @@ const switchInst = () => {
       line-height: 150%;
       color: $font__secondary;
     }
+  }
+  &__check {
+    height: 2rem;
+    width: 2rem;
   }
 }
 </style>
