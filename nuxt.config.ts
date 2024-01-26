@@ -5,7 +5,6 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "nuxt-phosphor-icons",
     "nuxt-swiper",
-    "@nuxtjs/eslint-module",
   ],
   app: {
     head: {
